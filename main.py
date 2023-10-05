@@ -68,13 +68,13 @@ def check_p():
 
 
 def signup():
-    with open('clients', 'a') as file:
+    with open('clients.txt', 'a') as file:
         file.write(f'\nCode: {textCode.get()} | nom : {textNom.get()} | prenom : {textPrenom.get()} | ville : {textVille.get()} | gmail : {textGmail.get()} | password : {textPassword.get()} | genre : {textGenre.get()}')
     to_login()
 
 
 def check_login():
-    with open('clients', 'r') as file:
+    with open('clients.txt', 'r') as file:
         lines = file.readlines()
     for line in lines:
         data = line.strip().split(' | ')
